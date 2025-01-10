@@ -1,0 +1,5 @@
+:root.__rstudio_bslib_get_variables {
+  --bslib-preset-type: bootswatch;
+  --bslib-preset-name: superhero;
+  --bootstrap-version: 5;
+}

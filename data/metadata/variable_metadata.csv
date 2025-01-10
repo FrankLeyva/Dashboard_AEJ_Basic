@@ -1,0 +1,193 @@
+variable,label,type,value_labels,has_value_labels
+date,Surveyed Date,POSIXct,NA,FALSE
+endDate,Surveyed End Date,POSIXct,NA,FALSE
+incompleteResultLabel,Incomplete,character,NA,FALSE
+resultId,Result Id,numeric,NA,FALSE
+device,Device Name,character,NA,FALSE
+Q1,AGEB,numeric,NA,FALSE
+Q2,Distrito electoral local,numeric,NA,FALSE
+Q3,Numero encuestador,numeric,NA,FALSE
+Q4,"En comparacion con el ano pasado, Diria usted que su situacion economica personal ha mejorado, ha empeorado o sigue igual? (Aclaracion: situación de lo que va de 2023 con respecto a 2022)",haven_labelled,Empeorado mucho=1; Empeorado algo=2; Igual=3; Mejorado algo=4; Mejorado mucho=5; NS/NC=6,TRUE
+Q5,"Con el total del ingreso familiar, usted diria que...? (En 2023)",haven_labelled,"Les alcanza bien y pueden ahorrar=1; Les alcanza justo, sin grandes dificultades=2; No les alcanza y tienen dificultades=3; No les alcanza y tienen grandes dificultades=4; NS/NC=5",TRUE
+Q6,"En su familia, hay por lo menos 1 o mas estudiantes de CUALQUIER nivel educativo?",haven_labelled,Sí=1; No=2,TRUE
+Q7,"En una escala del 1 al 10, que tan satisfecho esta con la educacion que recibe? EDUCACION BASICA: PRIMARIA Y SECUNDARIA",character,NA,FALSE
+Q8,"SOLO SI CONTESTO DEL 1 al 6, por que no se siente satisfecho? EDUCACION BASICA (Si contesto 7 o mas, dejar vacio)",character,NA,FALSE
+Q9,Indique si la escuela BASICA es publica o privada,haven_labelled,Publica=1; Privada=2,TRUE
+Q10,"En una escala del 1 al 10, que tan satisfecho esta con la educacion que recibe? EDUCACION MEDIA",character,NA,FALSE
+Q11,"SOLO SI CONTESTO DEL 1 al 6, por que no se siente satisfecho? EDUCACION MEDIA (Si contesto 7 o mas, dejar vacio)",character,NA,FALSE
+Q12,Indique si la escuela MEDIA es publica o privada,haven_labelled,Publica=1; Privada=2,TRUE
+Q13,"En una escala del 1 al 10, que tan satisfecho esta con la educacion que recibe? EDUCACION SUPERIOR",character,NA,FALSE
+Q14,"SOLO SI CONTESTO DEL 1 al 6, por que no se siente satisfecho? EDUCACION MEDIA (Si contesto 7 o mas, dejar vacio)",character,NA,FALSE
+Q15,Indique si la escuela SUPERIOR es publica o privada,haven_labelled,Publica=1; Privada=2,TRUE
+Q16.1,"Actividades dentro del hogar (internet, tv, radio, lectura, ejercicio, videojuegos, etc.)",haven_labelled,Sí=1; No=2,TRUE
+Q16.2,Fue a un parque o estuvo en contacto con la naturaleza,haven_labelled,Sí=1; No=2,TRUE
+Q16.3,Visito un centro y/o plaza comercial,haven_labelled,Sí=1; No=2,TRUE
+Q16.4,Visito las segundas y/o bazares,haven_labelled,Sí=1; No=2,TRUE
+Q16.5,"Fue a una cantina, bar o antro",haven_labelled,Sí=1; No=2,TRUE
+Q16.6,Fue al cine,haven_labelled,Sí=1; No=2,TRUE
+Q16.7,Asistio a una biblioteca,haven_labelled,Sí=1; No=2,TRUE
+Q16.8,Asistio a un concierto o espectaculo de musica,haven_labelled,Sí=1; No=2,TRUE
+Q16.9,"Asistio a una feria, fiesta popular o festividad religiosa",haven_labelled,Sí=1; No=2,TRUE
+Q16.10,"Asistio a un museo, galeria o casa de cultura",haven_labelled,Sí=1; No=2,TRUE
+Q16.11,Vio un espectaculo de teatro o danza (artes escenicas),haven_labelled,Sí=1; No=2,TRUE
+Q16.12,"Visito una zona historica o arqueologica, monumentos",haven_labelled,Sí=1; No=2,TRUE
+Q16.13,"Asistio a conferencias, conservatorios, coloquios",haven_labelled,Sí=1; No=2,TRUE
+Q16.14,Asistio o participo en un evento deportivo,haven_labelled,Sí=1; No=2,TRUE
+Q16.15,"Realizo ejercicio o actividad fisica (Gym, correr, bicibleta, caminar, etc.)",haven_labelled,Sí=1; No=2,TRUE
+Q17.1,IMSS,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.2,ISSSTE,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.3,IMSS Bienestar,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.4,Medicos de farmacias/genéricos,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.5,Servicio medico privado/particulares,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.6,No tiene servicio medico,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.7,Otro (especifique cuál):,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q17.7.1,Other,character,NA,FALSE
+Q18,"Aunque ya menciono cual servicio medico tiene, cual es el que USA? (Al que MAS acude/usa cuando se enferma)",haven_labelled,IMSS=1; ISSSTE=2; IMSS Bienestar=3; Médicos de farmacias/genericos=4; Servicio medico privado/particulares=5; No usa ningún tipo de servicio medico=6; Otro (especifique cuál):=7,TRUE
+Q18.1.1,Other,character,NA,FALSE
+Q19,"En una escala del 1 al 10, que tan satisfecho/a esta en GENERAL con los servicios de salud que recibe del servicio médico que mas USA?",character,NA,FALSE
+Q20,"En escala del 1 al 10, que tan satisfecho esta con las INSTALACIONES del servicio medico que usa?",character,NA,FALSE
+Q21,"En escala del 1 al 10, que tan satisfecho esta con el TIEMPO QUE TARDA EN SER ATENDIDO del servicio medico que usa?",character,NA,FALSE
+Q22,"En escala del 1 al 10, que tan satisfecho está con la DISPONIBILIDAD DE MEDICINAS del servicio médico que usa?",character,NA,FALSE
+Q23,"En escala del 1 al 10, que tan satisfecho está con la ATENCION RECIBIDA del servicio medico que usa?",character,NA,FALSE
+Q24,"En escala del 1 al 10, que tan satisfecho esta con la CERCANIA CON LOS CENTROS DE SALUD del servicio medico que usa?",character,NA,FALSE
+VAR00006,"En una escala del 1 al 5, que tan satisfecho/a esta en GENERAL con los servicios de salud que recibe del servicio médico que mas USA?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+VAR00005,"En escala del 1 al 5, que tan satisfecho esta con las INSTALACIONES del servicio medico que usa?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+VAR00004,"En escala del 1 al 5, que tan satisfecho esta con el TIEMPO QUE TARDA EN SER ATENDIDO del servicio medico que usa?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+VAR00003,"En escala del 1 al 5, que tan satisfecho está con la DISPONIBILIDAD DE MEDICINAS del servicio médico que usa?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+VAR00002,"En escala del 1 al 5, que tan satisfecho está con la ATENCION RECIBIDA del servicio medico que usa?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+VAR00001,"En escala del 1 al 5, que tan satisfecho esta con la CERCANIA CON LOS CENTROS DE SALUD del servicio medico que usa?",haven_labelled,Muy insatisfecho=1; Poco satisfecho=2; Algo satisfecho=3; Satisfecho=4; Muy satisfecho=5,TRUE
+Q25,"En una escala del 1 al 10, que tan satisfecho está con LA CASA EN LA QUE VIVE?",character,NA,FALSE
+Q26,"En una escala del 1 al 10, que tan satisfecho esta con LA CALIDAD DE LOS MATERIALES DE LA VIVIENDA?",character,NA,FALSE
+Q27,"En una escala del 1 al 10, que tan satisfecho está con EL TAMANO Y ESPACIOS DE LA VIVIENDA?",character,NA,FALSE
+Q28,"En una escala del 1 al 10, que tan satisfecho esta con LA ACCESIBILIDAD DE LA UBICACION DE SU VIVIENDA? (Cercania con centros comerciales, trabajo, escuelas, avenidas principales, etc.)",character,NA,FALSE
+Q29,"En una escala del 1 al 10, que tan satisfecho esta con el SERVICIO DEL AGUA?",character,NA,FALSE
+Q30,"En una escala del 1 al 10, que tan satisfecho esta con el SERVICIO DE DRENAJE Y ALCANTARILLADO?",character,NA,FALSE
+Q31,Cuantos dias a la semana tiene suministro de agua?,character,NA,FALSE
+Q32,"Durante este ano, Interpuso algun reporte relacionado al servicio de agua potable, drenaje o alcantarillado ante la autoridad correspondiente?",haven_labelled,Si=1; No=2; No sabe=3,TRUE
+Q33,El problema fue atendido por la dependencia?,haven_labelled,Si=1; No=2,TRUE
+Q34,"En una escala del 1 al 10, Que tan satisfecho esta con la solución del problema del agua, drenaje o alcantarillado?",character,NA,FALSE
+Q35,"En una escala del 1 al 10, que tan satisfecho esta con el SERVICIO DE Comision Federal de Electricidad (CFE)?",haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10; No cuenta con servicio de energia electrica=11,TRUE
+Q36,En el último mes que tan frecuentemente se fue la luz en su casa?,haven_labelled,Casi todos los dias=1; Al menos una a la semana=2; Al menos una vez al mes=3; Solo hubo un apagon=4; No hubo apagones=5,TRUE
+Q37,"Durante este ano, Interpuso algún reporte relacionado al servicio energía electrica ante la autoridad correspondiente?",haven_labelled,Si=1; No=2; No sabe=3,TRUE
+Q38,El problema fue atendido por la dependencia?,haven_labelled,Si=1; No=2,TRUE
+Q39,"En una escala del 1 al 10, Que tan satisfecho esta con la solucion del problema del energia electrica?",character,NA,FALSE
+Q40,"En una escala del 1 al 10, que tan satisfecho esta con el SERVICIO DE RECOLECCION DE BASURA?",character,NA,FALSE
+Q41,Cuantos dias a la semana tiene servicio de recoleccion de basura? (opciones de 0 a 3),character,NA,FALSE
+Q42,"Durante este ano, Interpuso algun reporte relacionado al servicio recoleccion de basura ante la autoridad correspondiente?",haven_labelled,Si=1; No=2; No sabe=3,TRUE
+Q43,El problema fue atendido por la dependencia?,haven_labelled,Si=1; No=2,TRUE
+Q44,"En una escala del 1 al 10, Que tan satisfecho esta con la solucion del problema de recoleccion de basura?",character,NA,FALSE
+Q45,"En una escala del 1 al 10, Que tan satisfecho se siente con la calidad del servicio de alumbrado publico en la CIUDAD?",character,NA,FALSE
+Q46,"En una escala del 1 al 10, que tan satisfecho esta con el SERVICIO DE ALUMBRADO PUBLICO DE SU COLONIA?",character,NA,FALSE
+Q47,"En una escala del 1 al 10, Que tan satisfecho se siente con la iluminacion adecuada de vialidades y areas publicas en la ciudad?",character,NA,FALSE
+Q48,"Durante este ano, Interpuso algun reporte relacionado al servicio de alumbrado publico ante la autoridad correspondiente?",haven_labelled,Si=1; No=2; No sabe=3,TRUE
+Q49,El problema fue atendido por la dependencia?,haven_labelled,Si=1; No=2,TRUE
+Q50,"En una escala del 1 al 10, Que tan satisfecho esta con la solucion del problema de alumbrado publico?",character,NA,FALSE
+Q51,"En una escala del 1 al 10, .Que tan satisfecho se siente con la calidad de las calles y la pavimentacion?",character,NA,FALSE
+Q52,"Durante este ano, Interpuso algun reporte relacionado a baches, calles o pavimentacion ante la autoridad correspondiente?",haven_labelled,Si=1; No=2; No sabe=3,TRUE
+Q53,El problema fue atendido por la dependencia?,haven_labelled,Si=1; No=2,TRUE
+Q54,"En una escala del 1 al 10, Que tan satisfecho esta con la solucion del problema de calles y pavimentacion?",character,NA,FALSE
+Q55,"En una escala del 1 al 10, que tan satisfecho esta con LA SEMAFORIZACION y senales viales?",character,NA,FALSE
+Q56,"En una escala del 1 al 10, que tan satisfecho esta con LA DISPONIBILIDAD DE AREAS VERDES Y ESPACIOS PUBLICOS CERCA DE SU CASA?",haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10; No hay areas verdes y espacios publicos cerca de mi casa=11,TRUE
+Q57.1,Equipamiento,haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10,TRUE
+Q57.2,Iluminacion,haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10,TRUE
+Q57.3,Cuidado (limpieza y mantenimiento),haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10,TRUE
+Q57.4,Seguridad,haven_labelled,1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 10=10,TRUE
+Q58,"En una escala del 1 al 10, en que estado considera que se encuentran las UNIDADES DEPORTIVAS?",character,NA,FALSE
+Q59,"En una escala del 1 al 10, en que estado considera que se encuentran las BIBLIOTECAS?",character,NA,FALSE
+Q60,"En una escala del 1 al 10, en que estado considera que se encuentran las CENTROS COMUNITARIOS?",character,NA,FALSE
+Q61,"En una escala del 1 al 10, en que estado considera que se encuentran las BANQUETAS?",character,NA,FALSE
+Q62,"En una escala del 1 al 10, en que estado considera que se encuentran los ESPACIOS PARA PERSONAS CON DISCAPACIDAD?",character,NA,FALSE
+Q63,En el ultimo ano (2023) con que frecuencia penso en irse de la ciudad?,haven_labelled,Muchas veces=1; Algunas veces=2; Pocas veces=3; Nunca=4; No sabe/ NC=5,TRUE
+Q64.1,La ciudad en la que vive,haven_labelled,Nada=1; Poco=2; Algo=3; Bastante=4; Mucho=5,TRUE
+Q64.2,La colona o fraccionamiento en el que vive,haven_labelled,Nada=1; Poco=2; Algo=3; Bastante=4; Mucho=5,TRUE
+Q64.3,Los vecinos que tiene,haven_labelled,Nada=1; Poco=2; Algo=3; Bastante=4; Mucho=5,TRUE
+Q65,Mencione un lugar/edificio/monumento que considere emblematico y representativo de Juarez,character,NA,FALSE
+Q66,"Cuantos vehículos de motor hay disponibles en su hogar? Si no tiene ninguno, poner 0)",numeric,NA,FALSE
+Q67,"En su hogar hay algun tipo de bicicletas? (ya sean de niño, adolescente o adulto)",haven_labelled,Sí=1; No=2,TRUE
+Q68,Cuantas bicicletas para NINOS hay disponibles en su hogar? (poner 0 si no se cuenta con ninguna de este tipo),numeric,NA,FALSE
+Q69,Cuantas bicicletas para ADOLESCENTES hay disponibles en su hogar? (poner 0 si no se cuenta con ninguna de este tipo),numeric,NA,FALSE
+Q70,Cuantas bicicletas para ADULTOS hay disponibles en su hogar? (poner 0 si no se cuenta con ninguna de este tipo),numeric,NA,FALSE
+Q71,Usted trabaja o realiza alguna actividad que le genere ingresos?,haven_labelled,Si=1; No=2,TRUE
+Q72.1,Caminando,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.2,Bicicleta,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.3,Autobus escolar,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.4,Autobus especial (transporte de personal),haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.5,Taxi,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.6,Uber/Didi/InDriver o cualquier otro servicio por aplicacion,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.7,Motocicleta,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.8,Vehículo propio,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.9,Camión/Rutera,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.10,"EcoBus (antes ViveBus, BravoBus, Juarez Bus)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.11,Otro medio (cual):,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q72.11.1,Other,character,NA,FALSE
+Q73.1,Caminando,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.2,Bicicleta,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.3,Autobus escolar,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.4,Autobus especial (transporte de personal),haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.5,Taxi,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.6,Uber/Didi/InDriver o cualquier otro servicio por aplicacion,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.7,Motocicleta,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.8,Vehículo propio,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.9,Camión/Rutera,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.10,"EcoBus (antes ViveBus, BravoBus, Juarez Bus)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.11,Otro medio (cuál):,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q73.11.1,Other,character,NA,FALSE
+Q74,"Usted utiliza el camion o rutera tradicional? (No eco bus, bravo bus, vive bus, juarez bus)",haven_labelled,Sí=1; No=2,TRUE
+Q75,"En una escala del 1 al 10, que tan satisfecho esta con la calidad del servicio del camion/rutera?",character,NA,FALSE
+Q76.1,Tiempo de espera de los camiones (tardan en pasar o no pasan),haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.2,"Estado de la unidad (limpieza, asientos, ventanas)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.3,Estado de la parada de camión,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.4,Trato de los choferes,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.5,"Conducción de la unidad por parte del chofer (van muy rápido, omiten señalamientos)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.6,"Tarifa (costos muy altos, no respetan descuentos)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.7,Otro (especifique):,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q76.7.1,Other,character,NA,FALSE
+Q77,Usted utiliza el transporte semimasivo  (BravoBus/EcoBus/ViveBus/Juarez bus)?,haven_labelled,Sí=1; No=2,TRUE
+Q78,"En una escala del 1 al 10, que tan satisfecho esta con la calidad del servicio del BravoBus/EcoBus/ViveBus/Juarez Bus)?",character,NA,FALSE
+Q79.1,Tiempo de espera de los camiones (tardan en pasar o no pasan),haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.2,"Estado de la unidad (limpieza, asientos, ventanas)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.3,Estado de la parada de camion,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.4,Trato de los choferes,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.5,"Conduccion de la unidad por parte del chofer (van muy rapido, omiten señalamientos)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.6,"Tarifa (costos muy altos, no respetan descuentos)",haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.7,Otro (especifique):,haven_labelled,Not Selected=0; Selected=1,TRUE
+Q79.7.1,Other,character,NA,FALSE
+Q80,Que tanto cree que nosotros los ciudadanos estemos orgullosos de ser o vivir en Ciudad Juarez?,haven_labelled,Nada=1; Poco=2; Algo=3; Mucho=4; Ns/Nc=5,TRUE
+Q81,"Para usted, cuales son los 2 problemas mas importantes de Juarez? PROBLEMA #1",haven_labelled,"Servicios basicos=1; Drogadiccion=2; Transporte publico=3; Falta de hospitales/clínicas de salud=4; Inseguridad/Violencia=5; Pobreza=6; Corrupcion=7; Falta de valores=8; Desempleo=9; Economia/Crisis=10; Impunidad=11; Participacion ciudadana en la resolución de problemas y/o exigencias de justicia=12; Alubrado publico=13; Calles y pavimentación=14; Drenaje pluvial=15; Infraestructura=16; Covid 19=17; Problemas medio ambientales(agua, aire, basura)=18; Otro (especificar cuál)=19",TRUE
+Q81.1.1,Other,character,NA,FALSE
+Q82,"Para usted, cuales son los 2 problemas mas importantes de Juarez? PROBLEMA #2",haven_labelled,"Servicios basicos=1; Drogadiccion=2; Transporte publico=3; Falta de hospitales/clínicas de salud=4; Inseguridad/Violencia=5; Pobreza=6; Corrupcion=7; Falta de valores=8; Desempleo=9; Economia/Crisis=10; Impunidad=11; Participación ciudadana en la resolución de problemas y/o exigencias de justicia=12; Alubrado público=13; Calles y pavimentación=14; Drenaje pluvial=15; Infraestructura=16; Covid 19=17; Problemas medio ambientales(agua, aire, basura)=18; Otro (especificar cual)=19",TRUE
+Q82.1.1,Other,character,NA,FALSE
+Q83,Que tan responsable se siente de ser parte del primer problema que menciono?,haven_labelled,Nada=1; Poco=2; Algo=3; Mucho=4; Ns/Nc=5,TRUE
+Q84,"En el ultimo ano (2023), Siente que sus garantias o derechos han sido violentados por alguna autoridad o dependencia gubernamental?",haven_labelled,Sí=1; No=2,TRUE
+Q85,Que autoridad o dependencia gubernamental fue?,character,NA,FALSE
+Q86,"En pocas palabras, en que consistio la violacion a sus derechos?",character,NA,FALSE
+Q87,"Por distintos motivos, no todas las personas que habitan en Juarez pueden acceder en condiciones de igualdad a los bienes y servicios, ni tienen las mismas oportunidades en la vida. Como describiría la desigualdad que se vive hoy en dia?",haven_labelled,Muy alta=1; Alta=2; Media=3; Baja=4; Muy baja=5; No sabe/No contestó=6,TRUE
+Q88,Que institucion contribuye mas a reducir la desigualdad en Juarez? (SELECCIONE LA QUE MAS LO HACE),haven_labelled,"Gobierno Federal=1; Gobierno Municipal=2; Gobierno Estatal=3; Organizaciones de la sociedad civil=4; Empresas=5; Iglesias=6; Universidades=7; Escuelas (primaria, secundaria, preparatoria)=8; La misma ciudadanía=9; Ninguna=10; No sabe/ No contestó=11",TRUE
+Q89,"En una escala del 1 al 10, que tan satisfecho está con LA CALIDAD DEL AIRE?",character,NA,FALSE
+Q90,"En una escala del 1 al 10, que tan satisfecho esta con LA CANTIDAD DE ARBOLES EN LA CIUDAD?",character,NA,FALSE
+Q91,"En una escala del 1 al 10, que tan satisfecho esta con LA LIMPIEZA EN LAS CALLES (basura en las calles)?",character,NA,FALSE
+Q92,"En una escala del 1 al 10, que tan satisfecho esta con LA CALIDAD DEL AGUA? (CONSIDERAR SI ESTA SUCIA, CONTAMINADA O TIENE MAL SABOR)",character,NA,FALSE
+Q93,Acostumbran separar la basura en organica e inorganica antes de entregarla al camion o dejarla en el contenedor?,haven_labelled,Sí=1; No=2,TRUE
+Q94,"Ademas, acostumbran a separar desperdicios para alimentar animales?",haven_labelled,Sí=1; No=2,TRUE
+Q95,"Ademas, acostumbran a separar desperdicios para echarlos a las plantas?",haven_labelled,Sí=1; No=2,TRUE
+Q96,"Ademas, acostumbran a separar carton, latas o plastico para vender o regalar?",haven_labelled,Sí=1; No=2,TRUE
+Q97,"De las siguientes problematicas medioambientales, cual cree que sea el mayor problema de la colonia? (Elija solo una)",haven_labelled,Llantas tiradas=1; Calles sucias/basura en calles=2; Parques sucios/descuidados=3; Basureros/tiraderos clandestinos (en casas/terrenos)=4; Terrenos baldios=5; Otro (especifique)=6,TRUE
+Q97.1.1,Other,character,NA,FALSE
+Q98,Conoce o ha escuchado hablar de Plan Estrategico de Juarez A.C.? SIN APOYO VISUAL,haven_labelled,Sí recordo sin apoyo visual=1; No recodo sin apoyo visual=2,TRUE
+Q99,Conoce o ha escuchado hablar de Plan Estratwgico de Juarez A.C.? CON APOYO VISUAL,haven_labelled,Sí recordó con apoyo visual=1; No recordó con apoyo visual=2,TRUE
+Q100.1,PEJ es una asociación apartidista y ciudadana,haven_labelled,Totalmente de acuerdo=1; Parcialmente de acuerdo=2; Parcialmente en desacuerdo=3; Totalmente en desacuerdo=4; NS/NC=5,TRUE
+Q100.2,PEJ es una organización con credibilidad,haven_labelled,Totalmente de acuerdo=1; Parcialmente de acuerdo=2; Parcialmente en desacuerdo=3; Totalmente en desacuerdo=4; NS/NC=5,TRUE
+Q100.3,PEJ es propositiva,haven_labelled,Totalmente de acuerdo=1; Parcialmente de acuerdo=2; Parcialmente en desacuerdo=3; Totalmente en desacuerdo=4; NS/NC=5,TRUE
+Q101,Sexo de la persona entrevistada,haven_labelled,Mujer=1; Hombre=2; Otro (especifique)=3,TRUE
+Q101.1.1,Other,character,NA,FALSE
+Q102,Cual es su edad?,numeric,NA,FALSE
+Q103,Seleccione Rango de edad (con base en respuesta anteior),haven_labelled,18 a 29 anos=1; 30 a 44 anos=2; 45 a 59 anos=3; 60 anos o más=4,TRUE
+Q104,Cuál es su ocupación?,haven_labelled,"Hogar=1; Empleado empresa privada=2; Empleado de empresa pública (en gobierno, CFE, Junta de Agua, PEMEX, etc)=3; Desempleado=4; Estudiante=5; Estudiante que trabaja=6; Empleador/empresario=7; Jubilado/Pensionado=8; Cuenta propia/Autoempleador=9",TRUE
+Q105,Cual es su grado de escolaridad?,haven_labelled,Analfabeta=1; Primaria terminada=2; Primaria incompleta=3; Secundaria terminada=4; Secundaria incompleta=5; Preparatoria terminada=6; Preparatoria incompleta=7; Universidad terminada=8; Universidad incompleta=9; Maestría/Doctorado=10; Carrera técnica terminada=11; Carrera técnica incompleta=12; Sabe leer y escribir pero no fue a la escuela=13,TRUE
+Q106,Recibe usted algun ingreso personal de algun tipo?,haven_labelled,Si=1; No=2,TRUE
+Q107,"Por favor indique cual es el rango de su ingreso PERSONAL por semana. Si no percibe ingresos, dejar vacío.",haven_labelled,"$0.00 a $2,186.87=1; $2,186.88 a $4,373.74=2; $4,373.75 a $6,560.61=3; $6,560.62 a $8,747.48=4; $8,747.49 a $10,934.35=5; $10,934.36 a $13,121.2=6; $13,121.23 a $15,308.09=7; $15,308.10 a $17,494.96=8; $17,494.97 a $19,681.83=9; $19,681.84 a $21,868.70=10; $21,868.71 a $24,055.57=11; $24,055.58 a $26,242.44=12; $26,242.456 a $28,429.31=13; $28,429.32 a $30,616.18=14; $30,616.19 a	$32,803.05=15; $32,803.06 a $34,989.92=16; $34,989.93 a	$37,176.79=17; Más de $37,176.79=18; NS/NC=19",TRUE
+Q108,"Si el ingreso PERSONAL dado es de un periodo diferente a la semana, anotar: (quincena, decena, veintena, mensual, bimestral, anual)",character,NA,FALSE
+Q109,Por favor indique cuál es el rango de su ingreso FAMILIAR por semana.,haven_labelled,"$0.00 a $2,186.87=1; $2,186.88 a $4,373.74=2; $4,373.75 a $6,560.61=3; $6,560.62 a $8,747.48=4; $8,747.49 a $10,934.35=5; $10,934.36 a $13,121.2=6; $13,121.23 a $15,308.09=7; $15,308.10 a $17,494.96=8; $17,494.97 a $19,681.83=9; $19,681.84 a $21,868.70=10; $21,868.71 a $24,055.57=11; $24,055.58 a $26,242.44=12; $26,242.456 a $28,429.31=13; $28,429.32 a $30,616.18=14; $30,616.19 a	$32,803.05=15; $32,803.06 a $34,989.92=16; $34,989.93 a	$37,176.79=17; Más de $37,176.79=18; NS/NC=19; No percibe ingresos Familiares=20",TRUE
+Q110,"Si el ingreso dado es de un periodo diferente a la semana, anotar: Quincena, decena, veintena, mensual, bimestral, anual)",character,NA,FALSE
+Q111,Colonia,character,NA,FALSE
+Q112,Fue supervisado (acompañado durante la entrevista por un supervisor),haven_labelled,Si=1; No=2,TRUE
