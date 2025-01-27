@@ -4,6 +4,7 @@ library(shiny)
 library(dplyr)
 
 # Read and process data
+districts_sf <- jsonlite::fromJSON("data/Cartografía/Jrz_Map.geojson",simplifyVector = F)
 districts_sf <- st_read("data/Cartografía/SHAPE_NUEVA_DISTRITACION.shp")
 districts_sf <- st_zm(districts_sf)
 aej_data <- read.csv("data/processed/AEJ_2019_2023_Vivienda.csv")

@@ -4,27 +4,17 @@ library(plotly)
 library(leaflet)
 library(dplyr)
 library(tidyr)
-library(scales)  # For nice number formatting
-library(sf)      # For spatial data
-library(shinyjs) # For UI enhancements
-library(DT)      # For any data tables we might need
+library(scales)  
+library(sf)      
+library(shinyjs) 
+library(DT)      
 
-# Load and process datasets
-# INEGI Data
 viviendas_data <- read.csv("data/processed/viviendas_completo.csv")
-
-# SNIIV Data
 sniiv_modalidad <- read.csv("data/processed/SNIIV_modalidad.csv")
 sniiv_organismo <- read.csv("data/processed/SNIIV_organismo.csv")
 sniiv_vivienda <- read.csv("data/processed/SNIIV_Vivienda.csv")
-
-# Survey Data
 survey_data <- read.csv("data/processed/AEJ_2019_2023_Vivienda.csv")
-
-# Load district map data
 districts_geo <- readRDS("data/processed/Map_Survey.rds")
-
-# Helper functions for plots
 create_time_series <- function(data, x, y, title) {
   plot_ly(data, x = ~get(x), y = ~get(y), type = 'scatter', mode = 'lines+markers') %>%
     layout(title = title,
@@ -32,28 +22,24 @@ create_time_series <- function(data, x, y, title) {
            yaxis = list(title = y))
 }
 
-# Color palettes and other common elements
 pal <- colorFactor(
   palette = "Set3",
   domain = districts_geo$No_Distrit
 )
-
 server <-  function(input, output, session) {
       
-    # Reactive values for shared state
     rv <- reactiveValues(
         selected_district = NULL
     )
     
-    # INEGI Demographics Tab
     output$occupancy_plot <- renderPlotly({
-        # Time series of total housing units
         plot_ly(
           y = viviendas_data$Año,
           x = viviendas_data$viviendas_habitadas,
           name = "Vivienda particular habitada",
           type = "bar",
-          orientation='h'
+          orientation='h',
+          color = I('aquamarine4')
         )
     })
     
@@ -63,7 +49,8 @@ server <-  function(input, output, session) {
         x = factor(viviendas_data$Año[c(3,4,6)]),
         y = viviendas_data$viviendas_deshabitadas[c(3,4,6)],
         name = "Vivienda particular habitada",
-        type = "bar"
+        type = "bar",
+        color = I('darkorange')
       ) %>%
       layout(
         xaxis = list(
@@ -75,16 +62,16 @@ server <-  function(input, output, session) {
     
     output$occupants_plot <- renderPlotly({
       plot_ly(
+
         y = viviendas_data$Año,
         x = viviendas_data$Promedio_Ocupantes_Por_Vivienda ,
         name = "Vivienda particular habitada",
         type = "bar",
-          orientation='h'
+          orientation='h',
+          color = I('cornflowerblue')
       )
     })
-    
-    # SNIIV Financing Tab
-    output$housing_type_plot <- renderPlotly({
+        output$housing_type_plot <- renderPlotly({
       plot_ly(
         y = sniiv_vivienda$valor_vivienda,
         x = sniiv_vivienda$acciones ,
@@ -118,17 +105,13 @@ server <-  function(input, output, session) {
       choices <- c( "Satisfaction" = "avg_satisfaction", "Quality" = "avg_quality", "Size" = "avg_size", "Location" = "avg_location" ) 
       label <- names(choices)[choices == input$perception_metric] 
       return(label) })
-    # District Perceptions Tab
     output$district_map <- renderLeaflet({
-        # Filter data based on selected year and metric
         data <- districts_geo %>%
             filter(Año == input$survey_year)
         
         metric_values <- reactive({
           data[[input$perception_metric]]
         })
-        # Create leaflet map
-        # Implementation here
         leaflet(districts_geo) %>%
           addTiles() %>%
           addPolygons(
@@ -208,35 +191,35 @@ ui <- fluidPage(
       tabPanel("Ocupación",
           fluidRow(
               column(12, 
-                  h3("Housing Occupancy Trends"),
+                  h3("Vivienda Particular Habitada"),
                   plotlyOutput("occupancy_plot")
               )
           ),
           fluidRow(
               column(6, 
-                  h4("Occupied vs Unoccupied"),
+                  h4("Vivienda Particular Deshabitada"),
                   plotlyOutput("occupation_ratio_plot")
               ),
               column(6,
-                  h4("Occupants per House"),
+                  h4("Ocupantes por Viviendas"),
                   plotlyOutput("occupants_plot")
               )
           )
       ),
       
       # SNIIV Financing Tab
-      tabPanel("Financing",
+      tabPanel("Financiamiento 2023",
           tabsetPanel(
               id = "financingTabs",
-              tabPanel("Housing Type",
+              tabPanel("Por Tipo de Vivienda",
                   plotlyOutput("housing_type_plot"),
                   DTOutput("housing_type_table")
               ),
-              tabPanel("Financing Type",
+              tabPanel("Por Modalidad de la Vivienda",
                   plotlyOutput("financing_type_plot"),
                   DTOutput("financing_type_table")
               ),
-              tabPanel("Organizations",
+              tabPanel("Por Organismo",
                   plotlyOutput("org_plot"),
                   DTOutput("org_table")
               )
@@ -244,18 +227,18 @@ ui <- fluidPage(
       ),
       
       # District Perceptions Tab
-      tabPanel("District Perceptions",
+      tabPanel("Percepción Ciudadana",
           sidebarLayout(
               sidebarPanel(
-                  selectInput("survey_year", "Year:",
+                  selectInput("survey_year", "Año:",
                             choices = 2019:2023,
                             selected = 2023),
-                  selectInput("perception_metric", "Metric:",
+                  selectInput("perception_metric", "Rasgo:",
                             choices = c(
-                                "Satisfaction" = "avg_satisfaction",
-                                "Quality" = "avg_quality",
-                                "Size" = "avg_size",
-                                "Location" = "avg_location"
+                                "Satisfacción" = "avg_satisfaction",
+                                "Calidad" = "avg_quality",
+                                "Tamaño" = "avg_size",
+                                "Ubicación" = "avg_location"
                             )),
                   width = 3
               ),
