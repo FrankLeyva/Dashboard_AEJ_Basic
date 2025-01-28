@@ -25,7 +25,13 @@ district_metrics <- survey_data %>%
     avg_location = mean(Ubicacion,na.rm=T)  )
 districts_geo <- readRDS("data/processed/Map_Survey.rds")
 filtered_data <- viviendas_data[!is.na(viviendas_data$viviendas_deshabitadas), ]
+geo_data <-districts_geo[,c("Año","No_Distrit",'avg_satisfaction','avg_quality','avg_size','avg_location')]
 
+unique_districts <- unique(geo_data$No_Distrit)
+color_palette <- c("#A1A3E8", "#F7D4C7", "#E5EBF0", "#ADDEE8", "#D6EDDE",
+                   "#FAC7B2", "#FFE0C2", "#EDDBED", "#BAC2E3")
+
+jrzmap <- jsonlite::fromJSON("data/Cartografía/Jrz_Map.geojson",simplifyVector = F)
 pal <- colorFactor(
   palette = "Set3",
   domain = districts_geo$No_Distrit
@@ -205,18 +211,11 @@ server <-  function(input, output, session) {
     )
   
   # Map configuration
-unique_districts <- unique(geo_data$No_Distrit)
-color_palette <- c("#A1A3E8", "#F7D4C7", "#E5EBF0", "#ADDEE8", "#D6EDDE",
-                   "#FAC7B2", "#FFE0C2", "#EDDBED", "#BAC2E3")
-geo_data <-districts_geo[,c("Año","No_Distrit",'avg_satisfaction','avg_quality','avg_size','avg_location')]
 
-jrzmap <- jsonlite::fromJSON("data/Cartografía/Jrz_Map.geojson",simplifyVector = F)
 
-selected_label <- reactive({ 
-  choices <- c( "Satisfacción" = "avg_satisfaction", "Calidad" = "avg_quality", "Tamaño" = "avg_size", "Ubicación" = "avg_location" ) 
-      label <- names(choices)[choices == input$perception_metric] 
-      return(label) })
+
   output$district_map <- renderHighchart({
+    choices <- c( "Satisfacción" = "avg_satisfaction", "Calidad" = "avg_quality", "Tamaño" = "avg_size", "Ubicación" = "avg_location" ) 
 
       selected_label <- names(choices)[choices == input$perception_metric]
       geo_data <- district_metrics %>%
